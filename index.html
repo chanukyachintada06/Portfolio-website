@@ -142,6 +142,26 @@ footer{
     text-align:center;
     padding:40px 0;
 }
+.live-btn{
+    margin-top: 20px;
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #2b8cff, #1f6fe0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.live-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(43,140,255,0.3);
+}
+
+
 </style>
 </head>
 
@@ -167,9 +187,10 @@ footer{
 <h1>Hi, I'm Chanukya</h1>
 <p>Cybersecurity Analyst & Developer</p>
     <button class="live-btn"
-onclick="window.location.href='https://chanukyachintada.vercel.app/'">
-🌐 Live Website
+        onclick="openLiveWebsite()">
+    🌐 Live Website
 </button>
+
 
 </div>
 </section>
@@ -281,8 +302,15 @@ method="POST">
 <footer>
 <p>© 2025 Chanukya Chintada</p>
 </footer>
+    <script>
+function openLiveWebsite() {
+    window.location.href = "https://chanukyachintada.vercel.app/";
+}
+</script>
+
 
 </body>
 </html>
+
 
 
