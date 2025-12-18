@@ -56,7 +56,11 @@ header a{
     text-decoration:none;
     margin-left:20px;
 }
-
+.header-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 /* ---------- HERO ---------- */
 #hero{
     height:100vh;
@@ -142,24 +146,70 @@ footer{
     text-align:center;
     padding:40px 0;
 }
-.live-btn{
-    margin-top: 20px;
-    width: 100%;
-    padding: 14px;
-    background: linear-gradient(135deg, #2b8cff, #1f6fe0);
+
+/*------LIVEBUTTON-----*/
+.live-nav-btn{
+    background: transparent;
+    border: 2px solid #2b8cff;
     color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
     cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+    transition: all 0.3s ease;
 }
 
-.live-btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(43,140,255,0.3);
+.live-nav-btn:hover{
+    background: #2b8cff;
 }
+
+/* nav bar */
+.nav-links{
+    list-style: none;        
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+/* ---------- DEMO SCROLLING BANNER ---------- */
+.demo-banner{
+    background: #0f2742;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 12px 0;
+}
+
+.demo-track{
+    white-space: nowrap;
+    animation: demoScroll 15s linear infinite;
+}
+
+.demo-track p{
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+@keyframes demoScroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
 
 
 </style>
@@ -169,17 +219,29 @@ footer{
 
 <!-- HEADER -->
 <header>
-<div class="container">
-<h3 style="color:white">Chanukya Venkata Sai</h3>
-<nav>
-<a href="#projects">Projects</a>
-<a href="#certificates">Certificates</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
-<a>Live Website</a>
-</nav>
-</div>
+    <div class="container header-flex">
+
+        <h3 class="logo-text">Chanukya Venkata Sai</h3>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certificates">Certificates</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+
+                <!-- Live Website Button -->
+                <li>
+                    <button class="live-nav-btn" onclick="openLiveWebsite()">
+                        Live Website
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
 </header>
+
 
 <!-- HERO -->
 <section id="hero">
@@ -187,13 +249,20 @@ footer{
 <h1>Hi, I'm Chanukya</h1>
 <p>Cybersecurity Analyst & Developer</p>
 </div>
-
-     <button class="live-btn"
-        onclick="openLiveWebsite()">
-    🌐 Live Website
-</button>
-    
 </section>
+
+<!-- DEMO NOTICE BANNER -->
+<section class="demo-banner">
+    <div class="demo-track">
+        <p>
+    🔔 You are currently viewing a preview version of this website.
+    For the official live version, please use the
+    <strong>Live Website</strong> option available in the top navigation bar.
+</p>
+
+    </div>
+</section>
+
 
 <!-- PROJECTS -->
 <section id="projects" class="section">
@@ -223,6 +292,19 @@ footer{
 </div>
 </section>
 
+<!-- DEMO NOTICE BANNER -->
+<section class="demo-banner">
+    <div class="demo-track">
+        <p>
+    🔔 You are currently viewing a preview version of this website.
+    For the official live version, please use the
+    <strong>Live Website</strong> option available in the top navigation bar.
+</p>
+
+    </div>
+</section>
+
+
 <!-- CERTIFICATES -->
 <section id="certificates" class="section">
 <div class="container">
@@ -247,6 +329,21 @@ footer{
 
 </div>
 </section>
+
+
+<!-- DEMO NOTICE BANNER -->
+<section class="demo-banner" >
+    <div class="demo-track">
+        <p>
+    🔔 You are currently viewing a preview version of this website.
+    For the official live version, please use the
+    <strong>Live Website</strong> option available in the top navigation bar.
+</p>
+
+    </div>
+</section>
+
+
 
 <!-- EDUCATION -->
 <section id="education" class="section">
@@ -304,13 +401,15 @@ method="POST">
 </footer>
     <script>
 function openLiveWebsite() {
-    window.location.href = "https://chanukyachintada.vercel.app/";
+    window.open("https://chanukyachintada.vercel.app/", "_blank");
 }
+
 </script>
 
 
 </body>
 </html>
+
 
 
 
