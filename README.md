@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio Website – Chintada Chanukya Venkata Sai
 
-This repository contains the source code for my **personal portfolio website**, a modern single-page web application designed to showcase my profile, skills, certifications, and publications with a strong focus on **cybersecurity and development**.
+This repository contains the pseudocode for my **personal portfolio website**, a modern single-page web application designed to showcase my profile, skills, certifications, and publications with a strong focus on **cybersecurity and development**.
 
 🔗 **Live Website:**  
 👉 https://chanukyachintada.vercel.app/
