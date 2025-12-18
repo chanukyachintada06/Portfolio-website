@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chanukya Venkata Sai | Portfolio</title>
+
+<style>
+/* ---------- GLOBAL ---------- */
+body{
+    margin:0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:#f6f8fb;
+    color:#222;
+}
+.container{
+    width:85%;
+    max-width:1100px;
+    margin:auto;
+}
+.section{
+    padding:80px 0;
+    background:#fff;
+}
+h2{
+    font-size:28px;
+    margin-bottom:30px;
+    position:relative;
+}
+h2::after{
+    content:"";
+    width:60px;
+    height:3px;
+    background:#2b8cff;
+    position:absolute;
+    left:0;
+    bottom:-10px;
+}
+
+/* ---------- HEADER ---------- */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:#2c3e50;
+    padding:15px 0;
+    z-index:1000;
+}
+header .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+header a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:20px;
+}
+
+/* ---------- HERO ---------- */
+#hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.4)),
+    url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b");
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-align:center;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects-list li{
+    margin-bottom:25px;
+}
+.projects-list h3{
+    color:#2b8cff;
+    margin-bottom:5px;
+}
+
+/* ---------- CERTIFICATES ---------- */
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+.cert-card{
+    text-align:center;
+}
+.cert-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid #ddd;
+}
+
+/* ---------- EDUCATION ---------- */
+.edu-card{
+    background:#fff;
+    padding:25px;
+    border-left:5px solid #2b8cff;
+    border-radius:10px;
+    margin-bottom:25px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+.edu-date{
+    display:inline-block;
+    background:#e7f1ff;
+    color:#2b8cff;
+    padding:6px 14px;
+    border-radius:20px;
+    font-size:14px;
+    margin:10px 0;
+}
+
+/* ---------- CONTACT ---------- */
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+.submit-btn{
+    width:100%;
+    background:#2ecc71;
+    border:none;
+    padding:14px;
+    color:#fff;
+    font-size:16px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+    background:#2c3e50;
+    color:#fff;
+    text-align:center;
+    padding:40px 0;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<div class="container">
+<h3 style="color:white">Chanukya Venkata Sai</h3>
+<nav>
+<a href="#projects">Projects</a>
+<a href="#certificates">Certificates</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+<div>
+<h1>Hi, I'm Chanukya</h1>
+<p>Cybersecurity Analyst & Developer</p>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+<div class="container">
+<h2>Projects</h2>
+
+<ul class="projects-list">
+<li>
+<h3>Project 1 – Phish Guard</h3>
+<p>Chrome extension that detects phishing URLs and blocks malicious sites.</p>
+<p><b>Tech:</b> HTML, CSS, JS, Chrome APIs</p>
+</li>
+
+<li>
+<h3>Project 2 – Disk Alert System</h3>
+<p>Shell script for automated disk usage monitoring.</p>
+<p><b>Tech:</b> Bash, Linux, Cron</p>
+</li>
+
+<li>
+<h3>Project 3 – LMS Platform</h3>
+<p>Student portal for courses, notes, and authentication.</p>
+<p><b>Tech:</b> HTML, CSS, JavaScript</p>
+</li>
+</ul>
+
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="section">
+<div class="container">
+<h2>My Certificates</h2>
+
+<div class="cert-grid">
+<div class="cert-card">
+<img src="https://via.placeholder.com/400x250">
+<p>Certificate 1</p>
+</div>
+
+<div class="cert-card">
+<img src="https://via.placeholder.com/400x250">
+<p>Certificate 2</p>
+</div>
+
+<div class="cert-card">
+<img src="https://via.placeholder.com/400x250">
+<p>Certificate 3</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="section">
+<div class="container">
+<h2>Education</h2>
+
+<div class="edu-card">
+<h3>Education1</h3>
+<p>B.Tech – Computer Science</p>
+<span class="edu-date">2023 – 2027</span>
+<p>Grade: 5th Semester</p>
+<p>Grade: 95%</p>
+</div>
+
+<div class="edu-card">
+<h3>Education2</h3>
+<p>Intermediate</p>
+<span class="edu-date">2021 – 2023</span>
+<p>Grade: 95%</p>
+</div>
+
+<div class="edu-card">
+<h3>Education3</h3>
+<p>10th Standard</p>
+<span class="edu-date">2019 – 2021</span>
+<p>Grade: 95%</p>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<div class="container">
+<h2>Contact Me</h2>
+<p>Feel free to send me a message regarding work or collaboration.</p>
+
+<form class="contact-form"
+action="https://chanukyachintada.vercel.app/"
+method="POST">
+
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email Address" required>
+<input type="text" placeholder="Subject" required>
+<textarea rows="5" placeholder="Your Message" required></textarea>
+
+<button class="submit-btn">Send Message</button>
+</form>
+
+</div>
+</section>
+
+<footer>
+<p>© 2025 Chanukya Chintada</p>
+</footer>
+
+</body>
+</html>
